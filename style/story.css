@@ -47,7 +47,7 @@ body {
 
 .hero-header {
   color: rgb(255, 255, 255); /* 渐變色 */
-  background-image: url("/img/hero.png");
+  background-image: url("hero.png");
   background-repeat: no-repeat;/* 不重複背景圖片 */
   background-position: center center;
   background-size: cover; /* 設定背景圖片尺寸 */
@@ -135,7 +135,7 @@ a{
 @media (max-width: 767px) {
   .hero-header{
     padding: 87px 0;
-    background-image: url("/img/hero-sm.png");
+    background-image: url("hero-sm.png");
   }
  .eng-title{
   font-size: 20px;
