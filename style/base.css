@@ -16,7 +16,7 @@ body {
 
 .hero-header {
   color: rgb(255, 255, 255); /* 渐變色 */
-  background-image: url("hero.png");
+  background-image: url("/img/hero.png");
   background-repeat: no-repeat;/* 不重複背景圖片 */
   background-position: center center;
   background-size: cover; /* 設定背景圖片尺寸 */
