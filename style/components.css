@@ -1,0 +1,134 @@
+/* ======================
+   Components（元件）
+   說明：有語意/樣式的區塊與元素（quote、footer、breadcrumb、btn…）
+   ====================== */
+
+/*padg*/
+.eng-title{
+  font-size: 28px;
+
+}
+.quote{
+  border-radius: 12px;/* 圓角 */
+  text-align: center;
+  max-width: 856px;    /* 限制最大寬度 */
+  margin: 0 auto;      /* 水平置中 */
+  padding: 48px 32px;  /* 上下推 48px，左右推 32px */
+  min-height: 180px;
+}
+.section-lined{
+  border-bottom: 1px solid var(--300-color);
+  padding-bottom: 48px;
+  max-width: 856px;   /* 區塊閱讀寬度，可依需求調整 */
+  margin: 0 auto;  
+}
+
+.history{
+ border-left: 1px solid var(--900-color);
+ padding-left:8px;
+}
+.history-list{
+  list-style-type: disc; /* 使用圓點列表 */
+  padding-left: 24px; /* 調整列表項目的左側間距 */
+}
+.concept-item{
+  border-left: 3px solid var(--300-color);
+  padding-left: 12px;
+}
+.border-underline{
+  border-bottom: 1px solid var(--300-color);
+  padding-bottom: 8px;
+}
+.bi {
+   padding-right: 8px;/* 調整圖示與文字之間的間距 */
+   vertical-align: bottom; /* 確保圖示與文字對齊 */
+}
+.bg-100{
+  background-color: var(--100-color);
+  height: 174px;
+}
+.footer{
+  text-align: center;
+  background-color: #e8fec5;
+  height: 96px;
+  justify-content: center;  
+  align-items: center;  
+}
+.footer-gray {
+  background-color: #F8F9FA;
+}
+
+.breadcrumb-item{
+  display:flex;
+  font-weight: 500;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+content:'/'; 
+padding:0 12px;
+color: var(--300-color);
+font-weight: 700;
+}
+.breadcrumb-link{
+  color: var(--600-color)
+}
+
+@media (max-width: 767px) {
+  .breadcrumb-item + .breadcrumb-item::before {
+    padding: 0 8px; /* 調整間距 */
+  }
+  .breadcrumb-item{
+    font-size: 14px;
+  }
+}
+
+.btn{
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  border-style: none;
+  background-color:transparent;
+}
+@media (max-width: 576px) {
+  .btn{
+    padding: 8px 16px;
+  }
+  
+}
+.active{
+  background-color: #C0FA73
+  
+}
+.page.btn{
+  padding: 8px 15px;
+  border-radius: 0;
+  font-weight: 500;
+}
+.footer .btn {
+  width: 115px;
+  height: 48px;
+  background: var(--900-color);
+  color: var(--100-color);
+  padding: 12px 24px ;
+}
+
+.footer-page {
+  align-items: center;     /* 垂直置中 */
+  padding: 16px 0;         /* 上下內距 */
+  justify-content: space-between;
+  border-bottom: 1px solid #DEE2E6;
+  
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px; /* 或用 ml-40 讓兩個連結間距拉開 */
+}
+.copyright{
+  text-align: center;   /* 讓裡面的兩行文字水平置中 */
+  align-items: center; /* 垂直置中 */
+  width: 100%;   
+  
+}
