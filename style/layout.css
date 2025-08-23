@@ -84,6 +84,12 @@
     margin-right: -6px;
     margin-left: -6px;
     }
+  
+  .col-10 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
     .col-md-1{
         padding-left: 6px; /* 欄位向左推 */
         padding-right: 6px;
@@ -104,4 +110,5 @@
         padding-right: 6px;
         width:100%; /* 4個欄位寬，佔據4個欄位寬 */
     }
-}
+    
+

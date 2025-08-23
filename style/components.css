@@ -58,50 +58,9 @@
   background-color: #F8F9FA;
 }
 
-.breadcrumb-item{
-  display:flex;
-  font-weight: 500;
-}
-.breadcrumb-item + .breadcrumb-item::before {
-content:'/'; 
-padding:0 12px;
-color: var(--300-color);
-font-weight: 700;
-}
-.breadcrumb-link{
-  color: var(--600-color)
-}
 
-@media (max-width: 767px) {
-  .breadcrumb-item + .breadcrumb-item::before {
-    padding: 0 8px; /* 調整間距 */
-  }
-  .breadcrumb-item{
-    font-size: 14px;
-  }
-}
 
-.btn{
-  border-radius: 4px;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  cursor: pointer;
-  border-style: none;
-  background-color:transparent;
-}
-@media (max-width: 576px) {
-  .btn{
-    padding: 8px 16px;
-  }
-  
-}
-.active{
-  background-color: #C0FA73
-  
-}
-.page.btn{
+.page .btn{
   padding: 8px 15px;
   border-radius: 0;
   font-weight: 500;
@@ -128,7 +87,41 @@ font-weight: 700;
 }
 .copyright{
   text-align: center;   /* 讓裡面的兩行文字水平置中 */
+  padding-top:32px;
+  border-top:1px solid var(--300-color);
   align-items: center; /* 垂直置中 */
+  color: var(--600-color);
+  font-size: 14px;
   width: 100%;   
+}
+
+.btn{
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  border-style: none;
+  background-color:transparent;
+}
+.active{
+  background-color: #C0FA73
   
+}
+@media (max-width: 576px) {
+  .btn{
+    padding: 8px 16px;
+  }
+  
+}
+.btn-light{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--900-color);
+}
+.btn-dark {
+  color: var(--background-color);
+  background-color: var(--900-color);
+  border: 1px solid var(--900-color);
 }

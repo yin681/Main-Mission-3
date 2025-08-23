@@ -252,19 +252,7 @@ a{
   align-items: center;  
 }
 
-.breadcrumb-item{
-  display:flex;
-  font-weight: 500;
-}
-.breadcrumb-item + .breadcrumb-item::before {
-content:'/'; 
-padding:0 12px;
-color: var(--300-color);
-font-weight: 700;
-}
-.breadcrumb-link{
-  color: var(--600-color)
-}
+
 .btn{
   border-radius: 4px;
   padding: 12px 24px;

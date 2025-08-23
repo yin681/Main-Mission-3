@@ -195,6 +195,9 @@ margin-right: 40px;
     .mb-md-0{
         margin-bottom: 0px;
     }
+    .mt-md-0{
+        margin-top: 0px;
+    }
     .mb-md-8{
         margin-bottom: 8px;
     }
@@ -299,6 +302,10 @@ padding-left: 8px;
 @media(max-width: 767px) {
     .p-md-24{
         padding: 24px;
+    }
+    .py-md-0{
+      padding-top: 0px;
+      padding-bottom: 0px;
     }
     .py-md-12{
       padding-top: 12px;

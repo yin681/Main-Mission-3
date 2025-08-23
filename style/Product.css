@@ -40,29 +40,24 @@ padding-right:4px;
 .btn-product-size{
     border:  1px solid var(--300-color);
     width: 160px;
+  height: 48px;   /* 固定高度 */
+  flex: 0 0 auto; /* 避免 flex 壓縮或自動延展 */
   
 }
 .btn-product-size:hover,
 .btn-product-size.active-border {
   border-color: var(--900-color);
 }
+
 .text-danger{
     color: #D74F4F;
 }
-.btn-light{
-    background-color: var(--background-color);
-    color: var(--text-color);
-    border: 1px solid var(--900-color);
-}
-.btn-dark{
-    color: var(--background-color);
-    background-color: var(--900-color);
-    border: 1px solid var(--900-color);
-}
+
 .product-action{
    display: flex;
    gap: 8px; /* 元素間距 */
 }
+
 .product-action .btn{
     width: 50%;
 }
@@ -74,4 +69,96 @@ padding-right:4px;
 }
 .product-info-item{
     border-bottom: var(--300-color) 1px solid;
+}
+/* 手機版 RWD */
+@media (max-width: 767px) {
+  /* 改成單欄 */
+  
+  .col-7, .col-5 { width: 100%; }
+  .product-col { width: 100%; }
+
+  /* 尺寸三欄 */
+  .size-group { display: flex; flex-wrap: wrap; gap: 8px; }
+  .size-group .btn-product-size { flex: 1 0 calc(33.333% - 8px); }
+
+  /* 主要按鈕滿版 */
+  .product-action .btn { width: 100%; margin-bottom: 8px; }
+
+  /* 推薦商品兩欄 */
+  .col-3 { width: 50%; }
+  /* 手機版愛心：純 icon */
+
+}
+
+/* 手機：一行兩個 */
+@media (max-width: 767px) {
+  .size-group .btn-product-size {
+    flex: 0 0 calc(50% - 8px);
+  }
+}
+
+/* 平板以上：維持原本自適應 */
+@media (min-width: 768px) {
+  .size-group .btn-product-size {
+    flex: 0 0 auto;
+  }
+}
+.mobile-action .btn-light {
+  width: 48px;            /* 右邊小按鈕固定寬高 */
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.ms-8 {
+  margin-left: 8px;
+}
+
+.product-action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 左邊「門市預約」：桌機、手機都撐滿 */
+.product-action .btn-dark {
+  flex: 1 1 auto;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+.product-action .btn-dark i {
+  margin-right: 8px;
+}
+
+/* 手機版愛心：純 icon */
+.heart-icon {
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-size: 22px;
+  color: #000;
+  text-decoration: none;
+}
+/* 手機：推薦清單橫向滑動 */
+@media (max-width: 767px) {
+  .like-row {
+    flex-wrap: nowrap;              /* 不換行，橫向排 */
+    overflow-x: auto;               /* 顯示水平捲軸 */
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;  /* 滑動時卡片對齊 */
+  }
+  .like-row > .col-3 {
+    flex: 0 0 80%;                  /* 每張卡佔 80% 寬（可改 70~90%） */
+    max-width: 80%;
+    scroll-snap-align: start;
+  }
+  .like-row img { width: 100%; display: block; }
+  /* 可選：隱藏 iOS/Chrome 滾動條 */
+  .like-row::-webkit-scrollbar { display: none; }
 }
